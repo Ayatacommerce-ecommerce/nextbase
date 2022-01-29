@@ -50,12 +50,12 @@ body {
     flex-direction: row-reverse !important;
 }
 
-.w-half {
+/* .w-half {
     align-self: center;
     width: 100%;
     margin-left: 0%;
     margin-right: 0%;
-}
+} */
 
 .w-full {
     width: 100%;
@@ -554,7 +554,6 @@ span .prev_arrow{
     text-align: center;
     font-weight: 500;
 }
-
 .section13Head {
     margin-bottom: -7%;
 }
@@ -563,7 +562,7 @@ span .prev_arrow{
 }
 
 .section13Card1 {
-    width: 40%;
+    width: 100%;
 }
 
 .section13Card2 {
