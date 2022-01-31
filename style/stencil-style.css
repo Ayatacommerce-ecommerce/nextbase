@@ -8,10 +8,6 @@ body {
     animation-name: fadeout;
     animation-duration: 2s;
 }
-.section {
-    height: 100vh;
-    width: 50%;
-}
 .active{
     opacity: 1;
     animation-name: fadein;
