@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./style/stencil-style.css">
     <link rel="stylesheet" href="./style/medium-screen.css">
     <!-- slick  used for the carousel scroll -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.0/css/foundation.min.css"
         integrity="sha512-pVeuW4GxpQBzt9coQEhGAj5//MWDsAdQNNy2GvkH81LFnDhL1x5TlVix1w6QHpRzd/uw2pKgi5qA6PJ3Zl3pAA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -281,24 +281,61 @@
                         <span class="spn1">#Nextbase </span> on the road
                     </h2>
                 </div>
-                <div class="slider">
-                    <div class="section12ImageCard">
-                        <img src="/assets/reviews/MaskGroup1.png" class="lazyload">
+                <div class="featured-categories categoryprslider" data-slick='{
+                                "autoplay":true,
+                                "autoplaySpeed":2000,
+                                "dots": true,
+                                "infinite": true,
+                                "arrows": false,
+                                "centerMode": true,
+                                "centerPadding": "2px",
+                                "cssEase": "cubic-bezier(0.42, 0.0, 0.58, 1.0)",
+                                "mobileFirst": true,
+                                "slidesToScroll": 1,
+                                "slidesToShow": 3,
+                                "adaptiveHeight": false,
+                                "responsive": [
+                                    {
+                                        "breakpoint": 768,
+                                        "settings": {
+                                            "autoplay":true,
+                                            "dots": false,
+                                            "arrows": true,
+                                            "slidesToScroll": 5,
+                                            "slidesToShow": 5
+                                        }
+                                    }
+                                ]
+                            }'>
+                    <div class="viewmepopup card-figure imgswapanimation large-4 columns">
+                        <div class="section12ImageCard">
+                            <img src="/assets/reviews/MaskGroup1.png" class="lazyload">
+                        </div>
                     </div>
-                    <div class="section12ImageCard">
-                        <img src="/assets/reviews/MaskGroup2.png" class="lazyload">
+                    <div class="viewmepopup card-figure imgswapanimation">
+                        <div class="section12ImageCard">
+                            <img src="/assets/reviews/MaskGroup2.png" class="lazyload">
+                        </div>
                     </div>
-                    <div class="section12ImageCard">
-                        <img src="/assets/reviews/MaskGroup3.png" class="lazyload">
+                    <div class="viewmepopup card-figure imgswapanimation">
+                        <div class="section12ImageCard">
+                            <img src="/assets/reviews/MaskGroup3.png" class="lazyload">
+                        </div>
                     </div>
-                    <div class="section12ImageCard">
-                        <img src="/assets/reviews/MaskGroup4.png" class="lazyload">
+                    <div class="viewmepopup card-figure imgswapanimation">
+                        <div class="section12ImageCard">
+                            <img src="/assets/reviews/MaskGroup4.png" class="lazyload">
+                        </div>
                     </div>
-                    <div class="section12ImageCard">
-                        <img src="/assets/reviews/MaskGroup1.png" class="lazyload">
+                    <div class="viewmepopup card-figure imgswapanimation">
+                        <div class="section12ImageCard">
+                            <img src="/assets/reviews/MaskGroup1.png" class="lazyload">
+                        </div>
                     </div>
-                    <div class="section12ImageCard">
-                        <img src="/assets/reviews/MaskGroup4.png" class="lazyload">
+                    <div class="viewmepopup card-figure imgswapanimation">
+                        <div class="section12ImageCard">
+                            <img src="/assets/reviews/MaskGroup4.png" class="lazyload">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -406,13 +443,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.0/js/foundation.min.js"
         integrity="sha512-Z/+KrKwu8/OaOvNp032BfmvlNDTOanmV4qkWiBQnElfp2G4V78V100MKTcVXcY2UAiP/jL8K1K6xpmOcvLLUsA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <script src="https://ayatacommerce-ecommerce.github.io/nextbase/script/animation.js"></script>
+    <script src="https://ayatacommerce-ecommerce.github.io/nextbase/script/animation.js"></script>
     <!-- <script src="/script/animation.js"></script> -->
     <!-- slick cdn -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="script/slick.js"></script>
+    <script src="script/slick.js"></script> -->
 </body>
 
 </html>
