@@ -7,7 +7,7 @@ var isMobile = window.innerWidth <540;
 // get image url for the section with frame index
 const getImageUrl = (section, index) => {
     console.log('incoming ', section)
-    if (section <= 0 || section == 4 || section == 10 || section == 12 || section == 14) return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/':''}Sequence_01/sh_010${isMobile ? '_m':''}.00001.png`;
+    if (section == 4 || section == 10 || section == 12 || section == 14) return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/':''}Sequence_01/sh_010${isMobile ? '_m':''}.00001.png`;
     if (section > 4) section = section - 1
     if (section >= 10) section = section - 1
     if (section >= 11) section = section - 1
@@ -137,7 +137,6 @@ new fullpage("#fullpage", {
     //  images from 1 to last exclude after load start here
     onLeave: (origin, destination, direction) => {
         //animateInterSection(0, 1, direction);
-
         // Preload the images of next section
         if (direction === "down") {
             for (let i = 1; i <= 30; i++) {
