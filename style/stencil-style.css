@@ -415,11 +415,14 @@ body {
     font-weight: 500;
 }
 
+video{
+    border-radius: 30px;
+}
 /*********************************** Section 11 styles ********************************************/
-.section11Card{
-    /* padding: 20%; */
+.section11Card {
+    padding: 20%;
     word-break: break-word;
-    /* width: 50%; */
+    width: 50%;
     background-color: #141414;
     border-radius: 50px;
     padding: 15px;
@@ -449,26 +452,35 @@ body {
     padding-right: 50px;
     color: #fff;
 }
-
-video{
-    border-radius: 30px;
+.name{
+    margin-bottom: 0px;
 }
+.reviewTitle {
+margin-top: 10px;
+font-weight: 700;
+}
+
 .section11Row1{
-    display: flex;
+display: flex;
 }
 .section11Card2{
-    word-break: break-word;
-    background-color: #fff;
-    border-radius: 50px;
-    padding: 15px;
-    padding-left: 40px;
-    text-align: left;
+word-break: break-word;
+background-color: #fff;
+border-radius: 50px;
+padding: 15px;
+padding-left: 40px;
+text-align: left;
 }
 .reviewHead{
-    display: -webkit-box;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-content: stretch;
+align-items: center;
+flex-wrap: nowrap;
 }
 .reviewContent{
-    font-size: 16px;
+font-size: 16px;
 }
 /*********************************** Section 12 styles ********************************************/
 
