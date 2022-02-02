@@ -452,10 +452,11 @@ body {
 video{
     border-radius: 30px;
 }
-
 /*********************************** Section 11 styles ********************************************/
 
-.section11Head {
+/*********************************** Section 12 styles ********************************************/
+
+.section12Head {
     margin-left: 0;
     margin-right: 0;
     text-align: center;
@@ -464,7 +465,7 @@ video{
     margin-bottom: 3%;
 }
 
-.section11row1 {
+.section12row1 {
     /*margin-bottom: 40%;*/
     text-align: center;
     display: flex;
@@ -477,16 +478,16 @@ video{
     width: 100% !important;
 }
 
-.section11Column2 {
+.section12Column2 {
     display: flex;
 }
 
-.section11iconImg {
+.section12iconImg {
     width: 40px;
     height: 40px;
 }
 
-.section11row2 {
+.section12row2 {
     margin-bottom: 15%;
     color: #fff;
     max-width: 100% !important;
@@ -494,7 +495,7 @@ video{
     flex-direction: row-reverse;
 }
 
-.section11Card {
+.section12Card {
     padding: 20%;
     word-break: break-word;
     width: 50%;
@@ -506,7 +507,7 @@ video{
     text-align: left;
 }
 
-.section11CardHead {
+.section12CardHead {
     margin-top: 2%;
     margin-left: 4%;
     font-size: 1.7rem;
@@ -515,14 +516,14 @@ video{
 }
 
 
-/* .section11CardTiltle{
+/* .section12CardTiltle{
   margin-top: 2%;
   margin-left: 4%;
   color: #fff;
   font-size: 1.3rem;
 } */
 
-.section11CardContent {
+.section12CardContent {
     font-size: 1.2rem;
     letter-spacing: 0.2px;
     text-align: justify;
@@ -530,15 +531,15 @@ video{
     margin-top: 20px;
 }
 
-/*********************************** Section 12 styles ********************************************/
+/*********************************** Section 13 styles ********************************************/
 
-.section12row1 h2 {
+.section13row1 h2 {
     color: #fff;
     text-align: center;
     font-weight: 500;
 }
 
-.section12Head {
+.section13Head {
     margin-bottom: -7%;
 }
 
@@ -546,12 +547,12 @@ video{
     display: inline-flex;
     margin-top: 5%;
 }
-.slider .section12ImageCard{
+.slider .section13ImageCard{
     width: 100%;
     height: 100%;
     margin: 50px;
 }
-.slider .section12ImageCard img{
+.slider .section13ImageCard img{
     width: 100%;
     height: 250px;
 }
@@ -564,25 +565,25 @@ span .prev_arrow{
     height: 50px;
     background-color: red;
 }
-/*********************************** Section 13 styles ********************************************/
+/*********************************** Section 14 styles ********************************************/
 
-.section13row1 h2 {
+.section14row1 h2 {
     color: #fff;
     text-align: center;
     font-weight: 500;
 }
-.section13Head {
+.section14Head {
     margin-bottom: -7%;
 }
 .line2{
     font-size: x-large;
 }
 
-.section13Card1 {
+.section14Card1 {
     width: 100%;
 }
 
-.section13Card2 {
+.section14Card2 {
     width: 40%;
     padding: 20%;
     word-break: break-word;
@@ -596,14 +597,14 @@ span .prev_arrow{
     margin-top: -7%;
 }
 
-.section13Card2Head {
+.section14Card2Head {
     padding-bottom: 10px;
     /* margin-top: 50px; */
     font-size: 1.7rem;
     color: #fff;
 }
 
-.section13Card2Content {
+.section14Card2Content {
     font-size: 1.2rem;
     letter-spacing: 0.2px;
     text-align: justify;
@@ -611,17 +612,17 @@ span .prev_arrow{
     color: #fff;
 }
 
-.section13Card2Link {
+.section14Card2Link {
     text-decoration: underline;
     color: #FFDC2A;
 }
 
-.section13row2 {
+.section14row2 {
     display: grid;
     margin-left: 9%;
 }
 
-.section13Card1fisrtRow p {
+.section14Card1fisrtRow p {
     font-size: 250px;
     font-weight: 700;
     background: linear-gradient(90deg, #0A78CA, #8111BB);
@@ -658,21 +659,21 @@ span .prev_arrow{
     color: #fff;
     font-size: smaller;
 }
-/*********************************** Section 14 styles ********************************************/
-.section14row1 h2{
+/*********************************** Section 15 styles ********************************************/
+.section15row1 h2{
     margin-bottom: 2%;
     text-align: center;
     color: #fff;
     font-weight: 500;
     font-size: x-large;
 }
-.section14row2{
+.section15row2{
     display: flex;
     color: #fff;
     font-size: small !important;
     text-align: center;
 }
-.section14row2 p{
+.section15row2 p{
     font-size:x-small;
     text-align: center;
 }

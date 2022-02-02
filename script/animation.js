@@ -7,8 +7,9 @@ var isMobile = window.innerWidth <540;
 // get image url for the section with frame index
 const getImageUrl = (section, index) => {
     console.log('incoming ', section)
-    if (section == 4 || section == 10 || section == 12 || section == 14) return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/':''}Sequence_01/sh_010${isMobile ? '_m':''}.00001.png`;
+    if (section == 4 || section == 10 || section == 11 || section == 13 || section == 15) return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/':''}Sequence_01/sh_010${isMobile ? '_m':''}.00001.png`;
     if (section > 4) section = section - 1
+    if (section >= 11) section = section - 1
     if (section >= 10) section = section - 1
     if (section >= 11) section = section - 1
     if (section >= 12) section = section - 1
@@ -55,7 +56,7 @@ const updateCanvas = () => {
     context.drawImage(img, 0, 0, canvas.width, canvas.height);
     if (isMobile) {
         canvas.style.marginTop = "";
-    } else {
+    }else {
         const availablePadding = window.innerHeight - canvas.height
         canvas.style.marginTop = (availablePadding / 2) + "px";
         canvas.style.marginBottom = (availablePadding / 2) + "px";
