@@ -134,14 +134,9 @@ new fullpage("#fullpage", {
             }, scrollingSpeed / 30);
 
             const footerContainer = $('#footerContainer')[0];
-            const footer = $('.footer')[0];
-
-            // console.log('how ',footerContainer.childElementCount)
-            console.log('how many child',footerContainer.children.length)
-
             if (footerContainer.children.length === 0){
+                const footer = $('.footer')[0];
                 footerContainer.appendChild(footer)
-                console.log('footer moved to last section')
             }
         }
 
