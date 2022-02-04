@@ -2,12 +2,12 @@
  * Determine if the device is a mobile based on the screen size
  * screen resolution range for moblie devices is from  360*640 to 414*896
  */
-var isMobile = window.innerWidth <540;
+var isMobile = window.innerWidth < 540;
 
 // get image url for the section with frame index
 const getImageUrl = (section, index) => {
-    console.log('incoming ', section)
-    if (section == 4 || section == 10 || section == 11 || section == 13 || section == 15) return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/':''}Sequence_01/sh_010${isMobile ? '_m':''}.00001.png`;
+    // console.log('incoming ', section)
+    if (section == 4 || section == 10 || section == 11 || section == 13 || section == 15) return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/' : ''}Sequence_01/sh_010${isMobile ? '_m' : ''}.00001.png`;
     if (section > 4) section = section - 1
     if (section >= 11) section = section - 1
     if (section >= 10) section = section - 1
@@ -15,9 +15,9 @@ const getImageUrl = (section, index) => {
     if (section >= 12) section = section - 1
 
 
-    console.log('outgoing section', section)
-        return `https://sadectip.sirv.com/images/${isMobile ? 'Mobile/':''}Sequence_${section.toString().padStart(2, "0")}/sh_${section
-          .toString().padStart(2, "0")}0${isMobile ? '_m':''}.${index.toString().padStart(5, "0")}.png`;
+    // console.log('outgoing section', section)
+    return `https://sadectip.sirv.com/images/${isMobile ? 'Mobile/' : ''}Sequence_${section.toString().padStart(2, "0")}/sh_${section
+        .toString().padStart(2, "0")}0${isMobile ? '_m' : ''}.${index.toString().padStart(5, "0")}.png`;
     // return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/':''}Sequence_${section.toString().padStart(2, "0")}/sh_${section
     // .toString().padStart(2, "0")}0${isMobile ? '_m':''}.${index.toString().padStart(5, "0")}.png`;
 }
@@ -56,14 +56,14 @@ const updateCanvas = () => {
     context.drawImage(img, 0, 0, canvas.width, canvas.height);
     if (isMobile) {
         canvas.style.marginTop = "";
-    }else {
+    } else {
         const availablePadding = window.innerHeight - canvas.height
         canvas.style.marginTop = (availablePadding / 2) + "px";
         canvas.style.marginBottom = (availablePadding / 2) + "px";
     }
 }
 updateCanvas()
-img.onload = function() {
+img.onload = function () {
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(img, 0, 0, canvas.width, canvas.height);
 };
@@ -94,7 +94,7 @@ function animateInterSection(originIndex, destinationIndex, direction) {
     }
 
     var index = 0;
-    var interval = setInterval(function() {
+    var interval = setInterval(function () {
         if (index < 30) {
             img.src = imagesList[index];
         } else if (index > 30) {
@@ -124,7 +124,7 @@ new fullpage("#fullpage", {
                 imagesList.push(getImageUrl(1, i));
             }
             var index = 0;
-            var interval = setInterval(function() {
+            var interval = setInterval(function () {
                 if (index < 15) {
                     img.src = imagesList[index];
                 } else if (index > 15) {
@@ -132,9 +132,20 @@ new fullpage("#fullpage", {
                 }
                 index++;
             }, scrollingSpeed / 30);
-        }
-    },
 
+            const footerContainer = $('#footerContainer')[0];
+            const footer = $('.footer')[0];
+
+            // console.log('how ',footerContainer.childElementCount)
+            console.log('how many child',footerContainer.children.length)
+
+            if (footerContainer.children.length === 0){
+                footerContainer.appendChild(footer)
+                console.log('footer moved to last section')
+            }
+        }
+
+    },
     //  images from 1 to last exclude after load start here
     onLeave: (origin, destination, direction) => {
         //animateInterSection(0, 1, direction);
