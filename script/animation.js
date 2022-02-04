@@ -111,6 +111,8 @@ new fullpage("#fullpage", {
     // sectionsColor: [ 'red', 'blue', 'green', 'cyan', 'magenta','yellow','pink','red', 'blue', 'green', 'cyan', 'magenta','red', 'blue', 'green', 'cyan', 'magenta',],
     scrollingSpeed: scrollingSpeed,
     offsetSections: true,
+    // autoScrolling: true,
+	// fitToSection: false,
     // easings:["steps(2, jump-none)","steps(2, jump-none)","ease","linear"],
     // easingcss3: "steps(2, jump-none)",
 
@@ -133,6 +135,7 @@ new fullpage("#fullpage", {
                 index++;
             }, scrollingSpeed / 30);
 
+    // footer section code
             console.log('Moving Footer')
             const footerContainer = $('#footerContainer')[0];
             console.log('footerContainer',footerContainer)
