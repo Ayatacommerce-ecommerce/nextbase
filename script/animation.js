@@ -138,7 +138,7 @@ new fullpage("#fullpage", {
             console.log('footerContainer',footerContainer)
             console.log('footerContainer length',footerContainer.children.length)
             if (footerContainer.children.length === 0){
-                const footer = $('footer')[0];
+                const footer = $('.footer')[0];
                 console.log('get original footer',footer)
                 footerContainer.appendChild(footer)
                 console.log('the moved footer section',footerContainer)
