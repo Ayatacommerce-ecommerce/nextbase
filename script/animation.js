@@ -135,17 +135,7 @@ new fullpage("#fullpage", {
                 index++;
             }, scrollingSpeed / 30);
 
-    // footer section code
-            console.log('Moving Footer')
-            const footerContainer = $('#footerContainer')[0];
-            console.log('footerContainer',footerContainer)
-            console.log('footerContainer length',footerContainer.children.length)
-            if (footerContainer.children.length === 0){
-                const footer = $('.footer')[0];
-                console.log('get original footer',footer)
-                footerContainer.appendChild(footer)
-                console.log('the moved footer section',footerContainer)
-            }
+            
         }
 
     },
@@ -160,6 +150,18 @@ new fullpage("#fullpage", {
             }
         }
 
+        // footer section code
+        console.log('Moving Footer')
+        const footerContainer = $('#footerContainer')[0];
+        console.log('footerContainer',footerContainer)
+        console.log('footerContainer length',footerContainer.children.length)
+        if (footerContainer.children.length === 0){
+            const footer = $('.footer')[0];
+            console.log('get original footer',footer)
+            footerContainer.appendChild(footer)
+            console.log('the moved footer section',footerContainer)
+        }
+        
         animateInterSection(origin.index + 1, destination.index + 1, direction);
         // Animate the content
         const leftHalfOrigin = $("#leftHalf", origin.item)[0];
