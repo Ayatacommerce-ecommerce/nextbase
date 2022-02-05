@@ -6,20 +6,22 @@ var isMobile = window.innerWidth < 540;
 
 // get image url for the section with frame index
 const getImageUrl = (section, index) => {
-    // console.log('incoming ', section)
-    if (section == 4 || section == 10 || section == 11 || section == 13 || section == 15) return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/' : ''}Sequence_01/sh_010${isMobile ? '_m' : ''}.00001.png`;
+    console.log('incoming ', section)
+    if (section == 4 || section == 10 || section == 11 || section == 13 || section == 15){
+        return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/' : ''}Sequence_01/sh_010${isMobile ? '_m' : ''}.00001.png`;
+    }
     if (section > 4) section = section - 1
     if (section >= 11) section = section - 1
     if (section >= 10) section = section - 1
     if (section >= 11) section = section - 1
     if (section >= 12) section = section - 1
 
-
-    // console.log('outgoing section', section)
+    console.log('outgoing section', section)
     return `https://sadectip.sirv.com/images/${isMobile ? 'Mobile/' : ''}Sequence_${section.toString().padStart(2, "0")}/sh_${section
         .toString().padStart(2, "0")}0${isMobile ? '_m' : ''}.${index.toString().padStart(5, "0")}.png`;
     // return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/':''}Sequence_${section.toString().padStart(2, "0")}/sh_${section
     // .toString().padStart(2, "0")}0${isMobile ? '_m':''}.${index.toString().padStart(5, "0")}.png`;
+
 }
 
 // Preload the images 
@@ -133,11 +135,8 @@ new fullpage("#fullpage", {
                     clearInterval(interval);
                 }
                 index++;
-            }, scrollingSpeed / 30);
-
-            
+            }, scrollingSpeed / 30);   
         }
-
     },
     //  images from 1 to last exclude after load start here
     onLeave: (origin, destination, direction) => {
@@ -151,6 +150,9 @@ new fullpage("#fullpage", {
         }
 
         // footer section code
+        // if (section.index == 15)
+        const section = $("section")
+        if (section.index)[1];
         console.log('Moving Footer')
         const footerContainer = $('#footerContainer')[0];
         console.log('footerContainer',footerContainer)
@@ -161,8 +163,10 @@ new fullpage("#fullpage", {
             footerContainer.appendChild(footer)
             console.log('the moved footer section',footerContainer)
         }
-        
+
         animateInterSection(origin.index + 1, destination.index + 1, direction);
+
+        
         // Animate the content
         const leftHalfOrigin = $("#leftHalf", origin.item)[0];
         const rightHalfOrigin = $("#rightHalf", origin.item)[0];
