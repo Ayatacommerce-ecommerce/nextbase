@@ -151,15 +151,14 @@ new fullpage("#fullpage", {
 
         // footer section code
         // if (section.index == 15)
-        const section = $("section")
-        if (section.index)[1];
-        console.log('Moving Footer')
+        // const destination = $("section15")
+        // console.log('Moving Footer')
         const footerContainer = $('#footerContainer')[0];
-        console.log('footerContainer',footerContainer)
-        console.log('footerContainer length',footerContainer.children.length)
+        // console.log('footerContainer',footerContainer)
+        // console.log('footerContainer length',footerContainer.children.length)
         if (footerContainer.children.length === 0){
             const footer = $('.footer')[0];
-            console.log('get original footer',footer)
+            // console.log('get original footer',footer)
             footerContainer.appendChild(footer)
             console.log('the moved footer section',footerContainer)
         }
