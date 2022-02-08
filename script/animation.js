@@ -105,6 +105,9 @@ function animateInterSection(originIndex, destinationIndex, direction) {
         index++;
     }, scrollingSpeed / 30);
 }
+
+//1. initialize the footer container 
+const footerContainer = $('#footerContainer')[0];
 /*
  * Initialize the fullPage plugin
  */
@@ -128,6 +131,7 @@ new fullpage("#fullpage", {
                 imagesList.push(getImageUrl(1, i));
             }
             var index = 0;
+            // 
             var interval = setInterval(function () {
                 if (index < 15) {
                     img.src = imagesList[index];
@@ -140,7 +144,6 @@ new fullpage("#fullpage", {
     },
     //  images from 1 to last exclude after load start here
     onLeave: (origin, destination, direction) => {
-        //animateInterSection(0, 1, direction);
         // Preload the images of next section
         if (direction === "down") {
             for (let i = 1; i <= 30; i++) {
@@ -150,19 +153,12 @@ new fullpage("#fullpage", {
         }
 
         // footer section code
-        // if (section.index == 15)
-        // const destination = $("section15")
-        // console.log('Moving Footer')
-        const footerContainer = $('#footerContainer')[0];
-        // console.log('footerContainer',footerContainer)
-        // console.log('footerContainer length',footerContainer.children.length)
         if (footerContainer.children.length === 0){
             const footer = $('.footer')[0];
-            // console.log('get original footer',footer)
             footerContainer.appendChild(footer)
-            console.log('the moved footer section',footerContainer)
         }
 
+        // Function to animate the image sequence
         animateInterSection(origin.index + 1, destination.index + 1, direction);
 
         
