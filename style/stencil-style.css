@@ -102,7 +102,9 @@ body {
     background-size: contain;
 }
 
-
+#fullpage{
+    z-index: 51;
+}
 /***************************** Section 1 style **************************************/
 
 .section1ColumnRight {
