@@ -91,7 +91,7 @@ body {
 }
 
 .fixedWrapper {
-    z-index: -1;
+    z-index: 0;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -105,10 +105,18 @@ body {
 /* #fullpage{
     z-index: 51;
 } */
+/***************************** common icon used in all cards  style **************************************/
 
-
-
+.arrowIcon{
+    border: none;
+    float: right;
+    padding: 0px 50px 0px 0px;
+}
 /***************************** SubHeader section  style **************************************/
+/***************************** fullpage z-index style **************************************/
+
+/***************************** fullpage z-index style end **************************************/
+
 .subHeader{
     z-index: 75;
     margin-top: 0.5rem;
@@ -260,6 +268,7 @@ body {
 }
 
 .section3Card {
+    position: fixed;
     padding: 20%;
     word-break: break-word;
     /*width: 50%;*/
@@ -271,11 +280,6 @@ body {
     text-align: left;
 }
 
-.arrowIcon{
-    border: none;
-    float: right;
-    padding: 0px 50px 0px 0px;
-}
 .section3CardHead {
     padding-bottom: 10px;
     margin-top: 50px;
