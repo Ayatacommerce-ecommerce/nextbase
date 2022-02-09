@@ -91,7 +91,7 @@ body {
 }
 
 .fixedWrapper {
-    z-index: 50;
+    z-index: -1;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -104,6 +104,43 @@ body {
 
 #fullpage{
     z-index: 51;
+}
+
+
+
+/***************************** SubHeader section  style **************************************/
+.subHeader{
+    z-index: 75;
+    margin-top: 0.5rem;
+    position: sticky;
+    top: 0;
+}
+.headerBtn{
+    list-style-type: none;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
+    width: 100%;
+    background: #000;
+}
+.liItems a{
+    text-decoration: none;
+    color: #fff;
+}
+.buyBtn {
+    background: linear-gradient(90deg, #0A78CA, #8111BB);
+    height: 31px;
+    width: 57px;
+    margin-bottom: 0px;
+    padding: 0px;
+    border-radius: 4px;
+}
+.liItems .active{
+    color:#0A78CA !important;
 }
 /***************************** Section 1 style **************************************/
 

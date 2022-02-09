@@ -18,10 +18,33 @@
 </head>
 
 
-
 <body>
-    <div class="fixedWrapper" >
-        <canvas id="anican"></canvas>
+    <div class="subHeader">
+        <ul class="headerBtn">
+            <li class="liItems">
+                <a href=""><img src="/assets/icons/header/622GW.png" alt=""> </a>
+            </li>
+            <li class="liItems active">
+                <a href="#fullpage">Overview </a>
+            </li>
+            <li class="liItems">
+                <a href="https://nextbase-sandbox.mybigcommerce.com/new-pdp-sos/">Specifications </a>
+            </li>
+            <li class="liItems">
+                <a href="">Installation </a>
+            </li>
+            <li class="liItems">
+            </li>
+            <li class="liItems">
+            </li>
+            <li class="liItems">
+                £249.00
+                    or 3 payments of £83.00
+            </li>
+            <li class="liItems">
+                <button class="buyBtn" href="#">Buy </button>
+            </li>
+        </ul>
     </div>
 
     <div id="fullpage">
@@ -70,16 +93,18 @@
                 <div class="row section3row">
                     <div class="large-2 medium-1 small-12 columns section3Sides w-half section3ColumnLeft" id="">
                     </div>
-                    <div class="section3Card large-6 medium-6 small-12 columns" id="bottomToTop2" style="z-index: 1000;">
+                    <div class="section3Card large-6 medium-6 small-12 columns" id="bottomToTop2"
+                        style="z-index: 1000;">
                         <h4 class="section3CardHead">
                             No data, no problem
                         </h4>
                         <a href="#">
-                        <p class="section3CardContent">
-                            Embedded precision location technology means emergency services can find you to within 3m ,
-                            anywhere on Earth. Your location: always known and easy to share.
-                        </p>
-                    </a>
+                            <p class="section3CardContent">
+                                Embedded precision location technology means emergency services can find you to within
+                                3m ,
+                                anywhere on Earth. Your location: always known and easy to share.
+                            </p>
+                        </a>
                     </div>
                     <div class="large-6 medium-6 small-12 columns w-half section3ColumnLeft" id="bottomToTop1">
                         <!-- <img class="imageCard" src="{{cdn 'webdav:new pdp/assets/pictures/image-card2.png'}}" alt=""> -->
@@ -94,7 +119,7 @@
             </div>
             <div class="section" id="section4" data-centered="true" data-percentage="60">
                 <div class="row section4Row" id="bottomToTop1">
-                    <div class="large-2 medium-1small-12 columns w-half section3ColumnLeft" id="">
+                    <div class="large-2 medium-1 small-12 columns w-half section3ColumnLeft" id="">
                     </div>
                     <div class="section4Card large-6 medium-6 small-12 columns" id="bottomToTop1">
                         <div class="icon-div">
@@ -192,12 +217,12 @@
                 <div class="section10Row2">
                     <div class="row">
                         <div class="large-6 medium-6 small-12 columns">
-                            <video width="100%" height="100%" controls autoplay loop>
+                            <video width="100%" height="100%" autoplay loop playsinline="true">
                                 <source src="/assets/clips/stabilization_off.mov">
                             </video>
                         </div>
                         <div class="large-6 medium-6 small-12 columns">
-                            <video width="100%" height="100%" controls autoplay loop>
+                            <video width="100%" height="100%" autoplay loop>
                                 <source src="/assets/clips/stabilization_on.mov">
                             </video>
                         </div>
@@ -229,16 +254,16 @@
                                     The 622GW is truly a massive upgrade in performance
                                 </h3>
                                 <p class="reviewContent">
-                                    Just got my 622GW and the performance out of the box 
-                                    is way better than my 522GW which I love. The touch 
-                                    screen is very responsive and easy to navigate and I 
-                                    really like the 4K recording quality which also makes 
-                                    the battery last longer during longer trips. 
+                                    Just got my 622GW and the performance out of the box
+                                    is way better than my 522GW which I love. The touch
+                                    screen is very responsive and easy to navigate and I
+                                    really like the 4K recording quality which also makes
+                                    the battery last longer during longer trips.
                                     The lens seems better quality too. So far, so good!
                                 </p>
                                 <a href="">
                                     <p class="allReview">
-                                        See all reviews  
+                                        See all reviews
                                     </p>
                                 </a>
                             </div>
@@ -459,20 +484,22 @@
                 </div>
             </div>
             <div class="section" id="section16" data-centered="true" data-percentage="70">
-                <h1 class=""style="color:#fff;">last animation section</h1>
+                <h1 class="" style="color:#fff;">last animation section</h1>
             </div>
             <div class="section" id="section17" data-centered="true" data-percentage="70">
             </div>
             <div class="section" id="section18" data-centered="true" data-percentage="70">
                 <div id="footerContainer">
-                    
+
                 </div>
             </div>
         </div>
     </div>
-    
+    <div class="fixedWrapper">
+        <canvas id="anican"></canvas>
+    </div>
     <footer class="footer">
-        <h1 style="color: white; text-align: center; background-color: red;" >This is the original footer</h1>
+        <h1 style="color: white; text-align: center; background-color: red;">This is the original footer</h1>
     </footer>
 
     <!-- <script src="/script/offset.js"></script>
@@ -482,6 +509,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <!-- <script type="text/javascript" src="/script/animation.js"></script> -->
 
+    <script>
+        $(document).ready(function () {
+            $('ul li a').click(function () {
+                $('li a').removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
     <script src="https://ayatacommerce-ecommerce.github.io/nextbase/script/offset.js"></script>
     <!-- fullpage.extension.min.js is used hile using the offset function -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.extensions.min.js"
@@ -495,6 +530,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- <script src="https://ayatacommerce-ecommerce.github.io/nextbase/script/animation.js"></script> -->
     <script src="/script/animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- slick cdn -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
