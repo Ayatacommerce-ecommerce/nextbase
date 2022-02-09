@@ -1,4 +1,19 @@
 /*
+ * Initialize some useful methods from fullpage plugin
+ */
+var $ = fp_utils.$,
+    addClass = fp_utils.addClass,
+    removeClass = fp_utils.removeClass;
+
+/*
+ * declare some dom variables
+ */
+const canvas = $("#anican")[0];
+const context = canvas.getContext("2d");
+const img = new Image();
+const emptyImageUrl = `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/' : ''}Sequence_01/sh_010${isMobile ? '_m' : ''}.00001.png`;
+
+/*
  * Determine if the device is a mobile based on the screen size
  * screen resolution range for moblie devices is from  360*640 to 414*896
  */
@@ -7,9 +22,10 @@ var isMobile = window.innerWidth < 540;
 // get image url for the section with frame index
 const getImageUrl = (section, index) => {
     console.log('incoming ', section)
-    if (section == 4 || section == 10 || section == 11 || section == 13 || section == 15){
-        return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/' : ''}Sequence_01/sh_010${isMobile ? '_m' : ''}.00001.png`;
+    if (section < 0 || section == 4 || section == 10 || section == 11 || section == 13 || section == 15 || section > 16) {
+        return emptyImageUrl;
     }
+
     if (section > 4) section = section - 1
     if (section >= 11) section = section - 1
     if (section >= 10) section = section - 1
@@ -31,20 +47,6 @@ for (let s = 1; s <= 2; s++) {
         img.src = getImageUrl(s, i);
     }
 }
-
-/*
- * Initialize some useful methods from fullpage plugin
- */
-var $ = fp_utils.$,
-    addClass = fp_utils.addClass,
-    removeClass = fp_utils.removeClass;
-
-/*
- * declare some dom variables
- */
-const canvas = $("#anican")[0];
-const context = canvas.getContext("2d");
-const img = new Image();
 
 /*
  * Update the canvas
@@ -98,7 +100,14 @@ function animateInterSection(originIndex, destinationIndex, direction) {
     var index = 0;
     var interval = setInterval(function () {
         if (index < 30) {
-            img.src = imagesList[index];
+            // only play the animation if there is a valid image
+            // hide the animationWrapper if no animation
+            if (imagesList[index] == emptyImageUrl) {
+                canvas.parentNode.style.display = "none";
+            } else {
+                canvas.parentNode.style.display = "block";
+                img.src = imagesList[index];
+            }
         } else if (index > 30) {
             clearInterval(interval);
         }
@@ -117,7 +126,7 @@ new fullpage("#fullpage", {
     scrollingSpeed: scrollingSpeed,
     offsetSections: true,
     // autoScrolling: true,
-	// fitToSection: false,
+    // fitToSection: false,
     // easings:["steps(2, jump-none)","steps(2, jump-none)","ease","linear"],
     // easingcss3: "steps(2, jump-none)",
 
@@ -139,7 +148,7 @@ new fullpage("#fullpage", {
                     clearInterval(interval);
                 }
                 index++;
-            }, scrollingSpeed / 30);   
+            }, scrollingSpeed / 30);
         }
     },
     //  images from 1 to last exclude after load start here
@@ -153,7 +162,7 @@ new fullpage("#fullpage", {
         }
 
         // footer section code
-        if (footerContainer.children.length === 0){
+        if (footerContainer.children.length === 0) {
             const footer = $('.footer')[0];
             footerContainer.appendChild(footer)
         }
@@ -161,7 +170,7 @@ new fullpage("#fullpage", {
         // Function to animate the image sequence
         animateInterSection(origin.index + 1, destination.index + 1, direction);
 
-        
+
         // Animate the content
         const leftHalfOrigin = $("#leftHalf", origin.item)[0];
         const rightHalfOrigin = $("#rightHalf", origin.item)[0];
