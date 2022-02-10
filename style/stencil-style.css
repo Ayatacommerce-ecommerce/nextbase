@@ -91,7 +91,7 @@ body {
 }
 
 .fixedWrapper {
-    z-index: 0;
+    z-index: -1;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -102,9 +102,12 @@ body {
     background-size: contain;
 }
 
-/* #fullpage{
-    z-index: 51;
-} */
+#fullpage{
+    z-index: -2;    
+}
+.section3Card{
+    z-index: 0;
+}
 /***************************** common icon used in all cards  style **************************************/
 
 .arrowIcon{
@@ -146,7 +149,7 @@ body {
     margin-bottom: 0px;
     padding: 0px;
     border-radius: 4px;
-}
+}   
 .liItems .active{
     color:#0A78CA !important;
 }
@@ -269,7 +272,6 @@ body {
 
 .section3Card {
     position: fixed;
-    padding: 20%;
     word-break: break-word;
     /*width: 50%;*/
     background-color: #141414;

@@ -21,7 +21,7 @@ var isMobile = window.innerWidth < 540;
 
 // get image url for the section with frame index
 const getImageUrl = (section, index) => {
-    console.log('incoming ', section)
+    // console.log('incoming ', section)
     if (section < 0 || section == 4 || section == 10 || section == 11 || section == 13 || section == 15 || section > 16) {
         return emptyImageUrl;
     }
@@ -32,7 +32,7 @@ const getImageUrl = (section, index) => {
     if (section >= 11) section = section - 1
     if (section >= 12) section = section - 1
 
-    console.log('outgoing section', section)
+    // console.log('outgoing section', section)
     return `https://sadectip.sirv.com/images/${isMobile ? 'Mobile/' : ''}Sequence_${section.toString().padStart(2, "0")}/sh_${section
         .toString().padStart(2, "0")}0${isMobile ? '_m' : ''}.${index.toString().padStart(5, "0")}.png`;
     // return `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? 'Mobile/':''}Sequence_${section.toString().padStart(2, "0")}/sh_${section
@@ -71,7 +71,7 @@ img.onload = function () {
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(img, 0, 0, canvas.width, canvas.height);
 };
-var scrollingSpeed = 1500;
+var scrollingSpeed = 100;
 
 /*
  * Add Entry animation
@@ -117,6 +117,7 @@ function animateInterSection(originIndex, destinationIndex, direction) {
 
 //1. initialize the footer container 
 const footerContainer = $('#footerContainer')[0];
+
 /*
  * Initialize the fullPage plugin
  */
@@ -166,6 +167,45 @@ new fullpage("#fullpage", {
             const footer = $('.footer')[0];
             footerContainer.appendChild(footer)
         }
+
+
+        
+        // const abc = $('.afeef')[1];
+        // code for last sections
+        // pdpLastSection
+        const section17Container = $('#section17Container')[0];
+        const section18Container = $('#section18Container')[0];
+        const section19Container = $('#section19Container')[0];
+        // const asdf = ['.bottom1','.bottom2','.bottom3'];
+        if(section17Container.children.length === 0 ){
+            const bottomsections = $('#pdpLastSection')[0];
+            section17Container.appendChild(bottomsections)
+            console.log(bottomsections)    
+        }
+        if(section18Container.children.length === 0 ){
+            const bottomsections = $('#pdpLastSection')[1];
+            section18Container.appendChild(bottomsections)
+            console.log(bottomsections)    
+        }
+        if(section19Container.children.length === 0 ){
+            const bottomsections = $('#pdpLastSection')[2];
+            section19Container.appendChild(bottomsections)
+            console.log(bottomsections)    
+        }
+        // const lastsection1 = $('#lastsection1')[0];
+        // // const asdf = ['.bottom1','.bottom2','.bottom3'];
+        // if(lastsection1.children.length === 0 ){
+        //     const bottomsections1 = $('.bottom2')[0];
+        //     lastsection.appendChild(bottomsections1)
+        //     console.log(bottomsections1)
+        // }
+        // const lastsection2 = $('#lastsection2')[0];
+        // // const asdf = ['.bottom1','.bottom2','.bottom3'];
+        // if(lastsection2.children.length === 0 ){
+        //     const bottomsections2 = $('.bottom3')[0];
+        //     lastsection.appendChild(bottomsections2)
+        //     console.log(bottomsections2)
+        // }
 
         // Function to animate the image sequence
         animateInterSection(origin.index + 1, destination.index + 1, direction);
