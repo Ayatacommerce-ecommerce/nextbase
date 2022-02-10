@@ -173,22 +173,22 @@ new fullpage("#fullpage", {
         // const abc = $('.afeef')[1];
         // code for last sections
         // pdpLastSection
-        const section17Container = $('#section17Container')[0];
-        const section18Container = $('#section18Container')[0];
-        const section19Container = $('#section19Container')[0];
+        const section17Container = $('.section17Container')[0];
+        const section18Container = $('.section18Container')[0];
+        const section19Container = $('.section19Container')[0];
         // const asdf = ['.bottom1','.bottom2','.bottom3'];
         if(section17Container.children.length === 0 ){
-            const bottomsections = $('#pdpLastSection')[0];
+            const bottomsections = $('.pdpLastSection')[0];
             section17Container.appendChild(bottomsections)
             console.log(bottomsections)    
         }
         if(section18Container.children.length === 0 ){
-            const bottomsections = $('#pdpLastSection')[1];
+            const bottomsections = $('.pdpLastSection')[1];
             section18Container.appendChild(bottomsections)
             console.log(bottomsections)    
         }
         if(section19Container.children.length === 0 ){
-            const bottomsections = $('#pdpLastSection')[2];
+            const bottomsections = $('.pdpLastSection')[2];
             section19Container.appendChild(bottomsections)
             console.log(bottomsections)    
         }
