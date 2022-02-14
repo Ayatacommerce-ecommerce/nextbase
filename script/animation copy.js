@@ -168,29 +168,6 @@ new fullpage("#fullpage", {
             footerContainer.appendChild(footer)
         }
 
-        // const containertoadd = $('.containertoadd')[0]
-        // // console.log(containertoadd)
-        // const newdiv = document.createElement('div')
-        // newdiv.className ="abc"
-        // // console.log(newdiv)
-        // if (containertoadd.children.length === 0 ){
-        //     const createddiv = $('.abc')
-        //     containertoadd.appendChild(newdiv)
-        //     if(newdiv.children.length === 0 ){
-        //         const contentonpage = $('.pdpLastSection')[0]
-        //         newdiv.appendChild(contentonpage)
-        //         console.log('new childern is',contentonpage)
-        //     }
-        //     console.log('no of child is',containertoadd.children.length)
-        // }
-        // if (containertoadd.children.length === 0){
-        //     console.log(containertoadd.children.length)
-        //      const comingdiv = $('.pdpLastSection')[1]  
-        //      containertoadd.appendChild(comingdiv)
-        //      console.log(comingdiv)
-        // }
-        // newdiv.style.cssText ="width:100%;height:500px;background-color:red;";
-        // document.containertoadd.appendChild(newdiv)
 
         
         // code for last sections from page builder
